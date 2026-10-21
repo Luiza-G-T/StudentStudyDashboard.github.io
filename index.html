@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Study Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!--Header Section-->
+    <header class="header">
+        <div>
+            <p class="greeting">Welcome Back!</p>
+            <h1>Dashboard</h1>
+            <p class="subtitle">A little progress every day</p>
+        </div>
+        <div class="date" id="currentDate">
+            Loadig Date...
+        </div>
+    </header>
+
+    <!--Main Section-->
+    <main class="dashboard">
+        <!--Timer Section-->
+        <section class="card timer-card">
+            <div class="card-title">
+                <h2>Study Timer</h2>
+                <span class="icon">clock icon!!!</span>
+            </div>
+
+            <p class="timer-description">
+                Focus on one task at a time.
+            </p>
+
+            <!--Subject / Topic Selector-->
+            <label for="subjectSelect">What are you studying today?</label>
+            <select id="subjectSelect">
+                <option value="General">General Study</option>
+                <option value="English">English</option>
+                <option value="Maths">Maths</option>
+                <option value="Computing">Computing</option>
+                <option value="Art">Art</option>
+                <option value="Science">Science</option>
+            </select>
+
+            <!--Timer-->
+            <div class="timer" id="timer">
+                25:00
+            </div>
+
+            <div class="timer-mode">
+                Focus Session
+            </div>
+
+            <!--Timer Buttons START-->
+            <div class="timer-buttons">
+                <button id="startButton" class="primary-button">
+                    ▶ Start
+                </button>
+
+                <button id="pauseButton" class="secondary-button">
+                    Pause
+                </button>
+
+                <button id="resetButton" class="secondary-button">
+                    Reset
+                </button>
+            </div>
+        </section>
+        <!--Timer Buttons END-->
+
+        <!--Today's Progress START-->
+        <section class="card progress-card">
+            <div class="card-title">
+                <h2>Today's Progress</h2>
+                <span class="icon">BOOK EMOJI</span>
+            </div>
+
+            <div class="progress-number" id="totalStudyTime">
+                0h 0m
+            </div>
+
+            <p class="progress-label">
+                Total Study Time
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill">                   
+                </div>
+            </div>
+
+            <p class="goal-text">
+                Daily goal: <strong>2 hours</strong>
+            </p>
+        </section>
+        <!--Today's Progress END-->
+
+        <!--To-Do List START-->
+        <section class="card todo-card">
+            <div class="card-title">
+                <h2>Today's Tasks</h2>
+                <span class="icon">CHECK ICON</span>
+            </div>
+
+            <div class="todo-input-container">
+                <input type="text" id="todoInput" placeholder="Add a task...">
+                <button id="addTodoButton" class="add-button">
+                    +
+                </button>
+            </div>
+
+            <ul id="todoList">
+                <!--Tasks here by javascript-->
+            </ul>
+        </section>
+        <!--To-Do List END-->
+
+
+        <!--Study Sessions START-->
+        <section class="card sessions-card">
+            <div class="card-title">
+                <h2>Today's Sessions</h2>
+                <span class="icon">BOOK ICON</span>
+            </div>
+
+            <div id="sessionsList">
+                <p class="empty-message">
+                    No study sessions yet. Start your first session!
+                </p>   
+            </div>
+        </section>
+        <!--Study Sessions END-->
+    </main>
+
+    <!--Footer START-->
+    <footer>
+        <p>Keep going! Progress doesn't have to be perfect</p>
+    </footer>
+    <!--Footer END-->
+    </div>
+
+    <!--Java Script LINK START-->
+    <script src="script.js"></script>
+
+    <!--Java Script LINK END-->
+</body>
+</html>
